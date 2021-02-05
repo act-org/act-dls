@@ -246,6 +246,13 @@ to your pipeline as well as a new Access Key to this repository. The combination
 of these two things will enable your pipelines to successfully `npm install`
 this dependency.
 
+## Internationalization
+
+The DLS is designed to "not get in the way" of your internationalization needs.
+While some components ship by default with English text within them (e.g. the
+words "loading", "required", "search", etc.), all instances of English text
+within the DLS can be overridden with internationalized words via props.
+
 ## Local Development
 
 In order to run the DLS locally:
