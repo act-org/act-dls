@@ -20,6 +20,7 @@ export const Primary = (): React.ReactElement<any> => (
     disabled={boolean('Disabled?', false)}
     error={boolean('Error?', false)}
     required={boolean('Required?', true)}
+    requiredText={text('Required Text', 'Required')}
     style={{
       width: 300,
     }}

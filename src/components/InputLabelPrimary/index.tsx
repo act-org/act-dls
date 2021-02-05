@@ -9,12 +9,15 @@ import mergeClasses from '~/helpers/mergeClasses';
 
 import useStyles from './styles';
 
-export type Props = InputLabelProps;
+export type Props = InputLabelProps & {
+  requiredText?: string;
+};
 
 const InputLabelPrimary: React.FC<Props> = ({
   classes: classesProp,
   children,
   required,
+  requiredText,
   ...otherProps
 }: Props): React.ReactElement<any> => {
   const classes = useStyles();
@@ -32,7 +35,9 @@ const InputLabelPrimary: React.FC<Props> = ({
       <div className="label-split">
         <span>{children}</span>
 
-        {required && <span className="required">Required</span>}
+        {required && (
+          <span className="required">{requiredText || 'Required'}</span>
+        )}
       </div>
     </InputLabel>
   );
