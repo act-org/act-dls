@@ -28,7 +28,6 @@ const RenderLogo: React.FC<RenderLogoProps> = ({
 }: RenderLogoProps): React.ReactElement<RenderLogoProps> => {
   const classes = useStyles();
   const LogoLink = LinkComponent || Link;
-
   const children = (
     <img
       alt={alt || 'Logo'}
