@@ -9,6 +9,7 @@
 
 import { Overrides } from '@material-ui/core/styles/overrides';
 
+import COLOR_PALETTE_ACT_ET from './palette';
 import COLORS from './colors';
 import DIMS from './dims';
 
@@ -81,6 +82,21 @@ const OVERRIDES: Overrides = {
     sizeSmall: {
       height: 32,
       width: 32,
+    },
+  },
+  MuiInputLabel: {
+    formControl: {
+      position: 'relative',
+      transform: undefined,
+    },
+    root: {
+      color: `${COLOR_PALETTE_ACT_ET.text?.primary}`,
+      fontSize: `1rem`,
+      marginBottom: `15px`,
+    },
+    shrink: {
+      transform: undefined,
+      transformOrigin: undefined,
     },
   },
   MuiLink: {
